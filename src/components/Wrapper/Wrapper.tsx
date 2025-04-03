@@ -5,7 +5,7 @@ import styled from "@/DefaultTheme";
 export const Wrapper = () => (
   <Root>
     <ImageContainer>
-      <Image src={CityImage} alt="City" />
+      <Image src={CityImage} alt="City" loading="lazy" />
     </ImageContainer>
     <TextContainer>
       <Typography variant="h3">Corporate Legal Representation</Typography>

@@ -12,7 +12,7 @@ export const Header = () => {
   return (
     <Root>
       <Wrapper>
-        <StyledLogo src={Logo} alt="Logo" />
+        <StyledLogo src={Logo} alt="Logo" loading="lazy" />
         <NavContainer>
           <Link href="/services">Services</Link>
           <Link href="/about">About</Link>
@@ -34,11 +34,10 @@ const Root = styled("div")(({ theme }) => ({
   justifyContent: "space-between",
   flexDirection: "column",
   padding: "2rem",
-  height: "100%",
   gap: "1rem",
   [theme.breakpoints.up("lg")]: {
     flexDirection: "row",
-    padding: "1rem 2rem",
+    padding: "1rem 5rem",
   },
 }));
 

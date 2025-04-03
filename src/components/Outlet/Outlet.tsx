@@ -6,6 +6,7 @@ import { Banner } from "@shared/Banner";
 import { AdviceSection } from "@shared/AdviceSection";
 import { RecentArticles } from "@shared/RecentArticles";
 import { SignUp } from "@shared/SignUp";
+import { Footer } from "@shared/Footer";
 
 export const Outlet = () => (
   <div>
@@ -17,5 +18,6 @@ export const Outlet = () => (
     <RecentArticles />
     <AdviceSection />
     <SignUp />
+    <Footer />
   </div>
 );

@@ -5,6 +5,7 @@ import { Areas } from "@shared/Areas";
 import { Banner } from "@shared/Banner";
 import { AdviceSection } from "@shared/AdviceSection";
 import { RecentArticles } from "@shared/RecentArticles";
+import { SignUp } from "@shared/SignUp";
 
 export const Outlet = () => (
   <div>
@@ -15,5 +16,6 @@ export const Outlet = () => (
     <Banner />
     <RecentArticles />
     <AdviceSection />
+    <SignUp />
   </div>
 );

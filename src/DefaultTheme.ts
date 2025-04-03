@@ -1,13 +1,13 @@
 import {
+  createBreakpoints,
   createStyled,
   MUIStyledCommonProps,
-  createBreakpoints,
 } from "@mui/system";
 import { createTheme, responsiveFontSizes } from "@mui/material";
 
 export enum FontFamily {
-  Primary = "'Ysabeau SC', sans-serif",
-  Secondary = "'Belanosima', sans-serif",
+  Primary = "'DM Sans', sans-serif",
+  Secondary = "'DM Serif Text', sans-serif",
 }
 
 const basicHeadingStyles = {
@@ -35,17 +35,13 @@ let defaultTheme = createTheme({
   breakpoints,
   palette: {
     primary: {
-      main: "#1E1E1E",
-      light: "#0070F3",
-      dark: "#004DA7",
-      logo: "#FF5733",
-      bg: "#EAEAEA",
+      main: "#00486D",
+      light: "#99B6C5",
+      dark: "#002B41",
     },
     secondary: {
-      main: "#FAFAFA",
-      light: "#A9F1E3",
-      dark: "#8BC6BB",
-      bg: "#999999",
+      main: "#F2F6F7",
+      light: "#E4ECF0",
     },
     error: {
       main: "#B51010",
@@ -60,12 +56,12 @@ let defaultTheme = createTheme({
       main: "#FFD700",
     },
     text: {
-      primary: "rgba(0,0,0,0.87)",
+      primary: "#00486D",
     },
     background: {
       default: "#FAFAFA",
     },
-    divider: "#A0A9AA",
+    divider: "#CECDCD70",
   },
   typography: {
     fontFamily: FontFamily.Primary,
@@ -79,9 +75,8 @@ let defaultTheme = createTheme({
       fontWeight: 600,
     },
     subtitle2: {
-      fontWeight: 100,
+      fontWeight: 400,
       fontSize: "1rem",
-      fontFamily: FontFamily.Secondary,
     },
     button: {
       fontFamily: FontFamily.Secondary,
@@ -99,10 +94,40 @@ let defaultTheme = createTheme({
       letterSpacing: "0.5rem",
       textAlign: "center",
     },
+    body2: {
+      fontSize: "1.25rem",
+    },
   },
   components: {
     MuiCssBaseline: {
       styleOverrides: scrollbarStyles,
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          padding: "0.75rem 1.5rem",
+          fontFamily: FontFamily.Primary,
+          textTransform: "none",
+          width: "fit-content",
+        },
+        fullWidth: {
+          width: "100%",
+        },
+      },
+    },
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#CECDCD70",
+          "& .MuiInputBase-input": {
+            color: "#FFFFFF",
+            "&::placeholder": {
+              color: "#FFFFFF",
+              opacity: 1,
+            },
+          },
+        },
+      },
     },
   },
 });

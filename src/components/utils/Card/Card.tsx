@@ -20,7 +20,7 @@ export const Card = ({
 }: ICardProps) => (
   <Root>
     <ImageContainer>
-      <Image src={icon} alt={title} $fullWidth={fullWidth} />
+      <Image src={icon} alt={title} $fullWidth={fullWidth} loading="lazy" />
     </ImageContainer>
     {date && <Typography variant="subtitle2">{date}</Typography>}
     <Typography variant="body2">{title}</Typography>

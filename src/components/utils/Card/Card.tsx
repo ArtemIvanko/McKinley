@@ -7,6 +7,7 @@ interface ICardProps {
   date?: string;
   description?: string;
   hasButton?: boolean;
+  fullWidth?: boolean;
 }
 
 export const Card = ({
@@ -15,13 +16,14 @@ export const Card = ({
   date,
   description,
   hasButton,
+  fullWidth = false,
 }: ICardProps) => (
   <Root>
     <ImageContainer>
-      <img src={icon} alt={title} />
+      <Image src={icon} alt={title} $fullWidth={fullWidth} />
     </ImageContainer>
+    {date && <Typography variant="subtitle2">{date}</Typography>}
     <Typography variant="body2">{title}</Typography>
-    {date && <Typography>{date}</Typography>}
     {description && <Typography>{description}</Typography>}
     {hasButton && <StyledButton>Learn More &#x2192;</StyledButton>}
   </Root>
@@ -33,7 +35,6 @@ const Root = styled("div")({
   gap: "1rem",
   maxWidth: "397px",
   width: "100%",
-  maxHeight: "442px",
   height: "auto",
   minHeight: "400px",
   boxShadow: "00px 20px 10px 2px rgba(0, 0, 0, 0.1)",
@@ -46,6 +47,14 @@ const ImageContainer = styled("div")({
   width: "100%",
   height: "100%",
 });
+
+const Image = styled("img")<{ $fullWidth: boolean }>(({ $fullWidth }) => ({
+  ...($fullWidth && {
+    width: "100%",
+    height: "auto",
+    objectFit: "contain",
+  }),
+}));
 
 const StyledButton = styled(Button)({
   padding: "0.5rem 0",

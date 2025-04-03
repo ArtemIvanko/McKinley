@@ -34,11 +34,10 @@ const Root = styled("div")(({ theme }) => ({
   justifyContent: "space-between",
   flexDirection: "column",
   padding: "2rem",
-  height: "100%",
   gap: "1rem",
   [theme.breakpoints.up("lg")]: {
     flexDirection: "row",
-    padding: "1rem 2rem",
+    padding: "1rem 5rem",
   },
 }));
 

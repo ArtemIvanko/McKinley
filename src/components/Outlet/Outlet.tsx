@@ -3,6 +3,7 @@ import { Header } from "@shared/Header";
 import { Wrapper } from "@shared/Wrapper";
 import { Areas } from "@shared/Areas";
 import { Banner } from "@shared/Banner";
+import { RecentArticles } from "@shared/RecentArticles";
 
 export const Outlet = () => (
   <div>
@@ -11,5 +12,6 @@ export const Outlet = () => (
     <Wrapper />
     <Areas />
     <Banner />
+    <RecentArticles />
   </div>
 );

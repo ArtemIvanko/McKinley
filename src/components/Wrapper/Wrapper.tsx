@@ -41,7 +41,7 @@ const StyledContainer = styled("div")(({ theme }) => ({
   `,
   gap: "2rem",
   textAlign: "center",
-  maxWidth: "1200px",
+  maxWidth: "1350px",
   [theme.breakpoints.up("lg")]: {
     gridTemplateColumns: "1fr 1fr",
     gridTemplateAreas: `"text image"`,

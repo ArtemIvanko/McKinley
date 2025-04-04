@@ -40,7 +40,6 @@ export const Areas = () => (
 const Root = styled("div")(({ theme }) => ({
   display: "flex",
   justifyContent: "center",
-  alignItems: "center",
   backgroundColor: theme.palette.background.default,
   padding: "2rem 1rem",
   [theme.breakpoints.up("lg")]: {
@@ -48,13 +47,17 @@ const Root = styled("div")(({ theme }) => ({
   },
 }));
 
-const StyledContainer = styled("div")({
+const StyledContainer = styled("div")(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
   gap: "1rem",
   maxWidth: "1350px",
-});
+  width: "100%",
+  [theme.breakpoints.up("lg")]: {
+    alignItems: "flex-start",
+  },
+}));
 
 const CardContainer = styled("div")(({ theme }) => ({
   display: "grid",
@@ -63,10 +66,7 @@ const CardContainer = styled("div")(({ theme }) => ({
   marginTop: "2rem",
   width: "100%",
   justifyItems: "center",
-  [theme.breakpoints.up("md")]: {
-    gridTemplateColumns: "1fr 1fr",
-  },
   [theme.breakpoints.up("lg")]: {
-    gridTemplateColumns: "repeat(3, 1fr)", // 3 колонки на десктопе
+    gridTemplateColumns: "repeat(3, 1fr)",
   },
 }));

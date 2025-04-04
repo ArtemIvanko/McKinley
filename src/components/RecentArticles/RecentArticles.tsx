@@ -7,56 +7,68 @@ import styled from "@/DefaultTheme";
 
 export const RecentArticles = () => (
   <Root>
-    <Typography variant="h3">Recent Articles</Typography>
-    <CardContainer>
-      <Card
-        icon={Apartment1}
-        title="12 Things About Web Design Your Boss Wants To Know"
-        date="December 13, 2020"
-        hasButton
-        fullWidth
-      />
-      <Card
-        icon={Apartment2}
-        title="The History Of Web Design"
-        date="December 10, 2020"
-        hasButton
-        fullWidth
-      />
-      <Card
-        icon={Apartment3}
-        title="How to improve Web Design Process"
-        date="December 10, 2020"
-        hasButton
-        fullWidth
-      />
-    </CardContainer>
+    <StyledContainer>
+      <Typography variant="h3">Recent Articles</Typography>
+      <CardContainer>
+        <Card
+          icon={Apartment1}
+          title="12 Things About Web Design Your Boss Wants To Know"
+          date="December 13, 2020"
+          hasButton
+          fullWidth
+        />
+        <Card
+          icon={Apartment2}
+          title="The History Of Web Design"
+          date="December 10, 2020"
+          hasButton
+          fullWidth
+        />
+        <Card
+          icon={Apartment3}
+          title="How to improve Web Design Process"
+          date="December 10, 2020"
+          hasButton
+          fullWidth
+        />
+      </CardContainer>
+    </StyledContainer>
   </Root>
 );
 
 const Root = styled("div")(({ theme }) => ({
   display: "flex",
-  flexDirection: "column",
+  justifyContent: "center",
   alignItems: "center",
-  gap: "1rem",
-  width: "100%",
+  backgroundColor: theme.palette.background.default,
   padding: "2rem 1rem",
   [theme.breakpoints.up("lg")]: {
-    padding: "4rem 5rem",
+    padding: "4rem 1rem",
+  },
+}));
+
+const StyledContainer = styled("div")(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  textAlign: "center",
+  gap: "1rem",
+  maxWidth: "1350px",
+  width: "100%",
+  [theme.breakpoints.up("lg")]: {
     alignItems: "flex-start",
+    textAlign: "left",
   },
 }));
 
 const CardContainer = styled("div")(({ theme }) => ({
-  display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center",
-  flexDirection: "column",
-  gap: "3rem",
-  padding: "0 3rem",
+  display: "grid",
+  gridTemplateColumns: "1fr",
+  gap: "2rem",
+  marginTop: "2rem",
   width: "100%",
+  justifyItems: "center",
   [theme.breakpoints.up("lg")]: {
-    padding: "0 2rem",
-    flexDirection: "row",
+    gridTemplateColumns: "repeat(3, 1fr)",
   },
 }));

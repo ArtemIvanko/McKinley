@@ -18,6 +18,7 @@ export const Banner = () => (
 
 const Root = styled("div")(({ theme }) => ({
   display: "flex",
+  justifyContent: "center",
   backgroundImage: `url(${BackgroundImage})`,
   margin: "2rem 0",
   alignItems: "center",

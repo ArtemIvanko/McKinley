@@ -35,8 +35,9 @@ const Root = styled("div")({
   gap: "1rem",
   maxWidth: "397px",
   width: "100%",
-  height: "auto",
+  height: "100%",
   minHeight: "400px",
+  maxHeight: "600px",
   boxShadow: "00px 20px 10px 2px rgba(0, 0, 0, 0.1)",
   padding: "2rem 1rem",
 });
@@ -45,7 +46,6 @@ const ImageContainer = styled("div")({
   display: "flex",
   alignItems: "center",
   width: "100%",
-  height: "100%",
 });
 
 const Image = styled("img")<{ $fullWidth: boolean }>(({ $fullWidth }) => ({
